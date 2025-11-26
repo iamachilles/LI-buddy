@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "LI Buddy",
+  "version": "1.0.0",
+  "description": "Extract engagement data (reactions, comments, reposts) from LinkedIn posts. Send to webhook or download as CSV.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["scraper.js"],
+      "matches": ["https://www.linkedin.com/*"]
+    }
+  ]
+}
