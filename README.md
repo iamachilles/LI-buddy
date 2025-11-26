@@ -16,7 +16,7 @@
 
 ### 1. Install the Extension
 
-1. Download this repository: Clone > Download ZIP file
+1. Download this repository: Code > Download ZIP file
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable **Developer mode** (toggle in top-right corner)
 4. Click **Load unpacked**
